@@ -17,3 +17,4 @@ def resize(frame,scale):
 
 cv.imshow("new_img",resize(img,0.1))
 cv.waitKey(0)
+

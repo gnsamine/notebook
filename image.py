@@ -10,12 +10,11 @@ Split and merge images
 
 import cv2 as cv
 img = cv.imread("photos/sg2.png")
-"""
 print( img.shape )
 
 cv.imshow("win",img)
 cv.waitKey(0)
-"""
+
 
 #access the certain part of the picture
 # img[:(row),:(column),:(channel)] if ypu set channel to 0=white-black  
