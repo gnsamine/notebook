@@ -7,7 +7,7 @@ print(img.shape)
 
 
 #convert the img to graysclae (intensity distributions of the image not the color)
-grayimg= cv.cvtColor(img, cv.COLOR_BGR2GRAY,cv.BORDER_CONSTANT,(0,0),0)
+grayimg= cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 cv.imshow("pumagray", grayimg)
 
 """
@@ -25,11 +25,11 @@ print(blur.shape)
 edge= cv.Canny(grayimg,75,75)
 
 #cv.imshow("edge", edge)
-#dilate 
+#dilate increases whiter area
 dilated=cv.dilate(edge,(-17,-17), iterations=3)
 #cv.imshow("dilated", dilated)
 
-#erote the image
+#erote reduces the lighter area
 eroted= cv.erode(dilated,(3,3), iterations=2)
 #cv.imshow("eroded", eroted)
 #cv.imwrite('edges.jpg', eroted)
@@ -44,8 +44,3 @@ cropped= img[:  (img.shape[1]//2), (img.shape[1]//2):]
 
 cv.waitKey(0)
 cv.destroyAllWindows()
-
-"""
-
-
-"""

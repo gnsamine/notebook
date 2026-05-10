@@ -20,7 +20,7 @@ cv.imshow("new", img)
 gry= cv.cvtColor(blur,cv.COLOR_BGR2GRAY)
 edge=cv.Canny(gry,45,45)
 
-dilated= cv.dilate(edge,(17,17), iterations=4)
+dilated= cv.dilate(edge,(3,3), iterations=4)
 
 
 for i in range(img.shape[0]):
